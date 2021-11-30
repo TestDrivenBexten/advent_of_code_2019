@@ -11,4 +11,11 @@ class Day1Tests {
         val fuel = calculateFuel(12)
         assertEquals(2, fuel)
     }
+
+    @Test
+    @DisplayName("Should require 2 fuel for mass of 14")
+    fun should_require_2_fuel_for_mass_14(){
+        val fuel = calculateFuel(14)
+        assertEquals(2, fuel)
+    }
 }
