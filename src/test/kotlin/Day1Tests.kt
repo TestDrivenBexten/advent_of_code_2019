@@ -18,4 +18,18 @@ class Day1Tests {
         val fuel = calculateFuel(14)
         assertEquals(2, fuel)
     }
+
+    @Test
+    @DisplayName("Should require 654 fuel for mass of 1969")
+    fun should_require_654_fuel_for_mass_1969(){
+        val fuel = calculateFuel(1969)
+        assertEquals(654, fuel)
+    }
+
+    @Test
+    @DisplayName("Should require 33583 fuel for mass of 100756")
+    fun should_require_33583_fuel_for_mass_100756(){
+        val fuel = calculateFuel(100756)
+        assertEquals(33583, fuel)
+    }
 }
