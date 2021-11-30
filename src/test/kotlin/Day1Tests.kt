@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
+import java.nio.file.Paths
 import kotlin.test.assertEquals
 
 @DisplayName("Day 1 Tests")
@@ -31,5 +32,14 @@ class Day1Tests {
     fun should_require_33583_fuel_for_mass_100756(){
         val fuel = calculateFuel(100756)
         assertEquals(33583, fuel)
+    }
+
+    @Test
+    @DisplayName("Should calculate total fuel requirements")
+    fun should_calculate_total_fuel_requirements() {
+        val path = Paths.get("src/test/kotlin/Day1Input.txt")
+        val intList = readIntListFromPath(path)
+        val total = intList.sumOf { calculateFuel(it) }
+        assertEquals(3265923, total)
     }
 }
