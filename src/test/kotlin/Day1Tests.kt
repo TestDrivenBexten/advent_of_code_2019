@@ -42,4 +42,25 @@ class Day1Tests {
         val total = intList.sumOf { calculateFuel(it) }
         assertEquals(3265923, total)
     }
+
+    @Test
+    @DisplayName("Should require 2 fuel for mass of 14")
+    fun should_require_2_fuel_for_mass_14_compound(){
+        val fuel = calculateCompoundFuel(14)
+        assertEquals(2, fuel)
+    }
+
+    @Test
+    @DisplayName("Should require 966 fuel for mass of 1969")
+    fun should_require_966_fuel_for_mass_1969_compound(){
+        val fuel = calculateCompoundFuel(1969)
+        assertEquals(966, fuel)
+    }
+
+    @Test
+    @DisplayName("Should require 50346 fuel for mass of 100756")
+    fun should_require_50346_fuel_for_mass_100756_compound(){
+        val fuel = calculateCompoundFuel(100756)
+        assertEquals(50346, fuel)
+    }
 }
