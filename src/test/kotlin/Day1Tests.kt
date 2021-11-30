@@ -63,4 +63,13 @@ class Day1Tests {
         val fuel = calculateCompoundFuel(100756)
         assertEquals(50346, fuel)
     }
+
+    @Test
+    @DisplayName("Should calculate total compound fuel requirements")
+    fun should_calculate_total_compound_fuel_requirements() {
+        val path = Paths.get("src/test/kotlin/Day1Input.txt")
+        val intList = readIntListFromPath(path)
+        val total = intList.sumOf { calculateCompoundFuel(it) }
+        assertEquals(4896020, total)
+    }
 }
